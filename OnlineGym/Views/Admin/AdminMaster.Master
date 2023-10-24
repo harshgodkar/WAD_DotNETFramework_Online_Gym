@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="OnlineGym.Views.Admin.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="../../Assets/lib/css/bootstrap.min.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="Coaches.aspx">Coaches</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Receptionist.aspx">Receptionist</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Equipments.aspx">Equipments</a>
+            </li>
+            <li class="nav-item">
+                <asp:Button ID="LogoutBtn" runat="server" CssClass="nav-link" Text="LogOut" OnClick="LogoutBtn_Click" />
+            </li>
+        </ul>
+    
+        <div>
+            <asp:ContentPlaceHolder ID="Mybody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
